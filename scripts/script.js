@@ -48,11 +48,15 @@ BotonGet.addEventListener("click", () => {
      Resultados.innerHTML = ""
      if(UserGetID===item.id || UserGetID ===""){
       if (UserGetID) {
-        Resultados.innerHTML = `<li>Nombre: ${item.name} Apellido: ${item.LastName}</li>`;
+        Resultados.innerHTML = `<li>Nombre: ${item.name}</li>
+         <li> Apellido: ${item.LastName}</li> 
+         <li> ID: ${item.id}</li>`;
         console.log(item);
       } else {
      item.forEach(element => {
-        Resultados.innerHTML   += `<li>Nombre: ${element.name} Apellido: ${element.LastName}</li>`
+        Resultados.innerHTML   += `<li>Nombre: ${element.name}</li>
+        <li> Apellido: ${element.LastName}</li> 
+        <li> ID: ${element.id}</li>`;
        });
       }
      }
